@@ -10,14 +10,14 @@
 <body>
     <header>
         <a href="#" class="logo">Portofolio</a>
-        <div class="toggle"></div>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#Services">Services</a></li>
-            <li><a href="#Work">Work</a></li>
-            <li><a href="#Testimonial">Testimonial</a></li>
-            <li><a href="#Contact">Contact</a></li>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="menu">
+            <li><a href="#home" onclick="toggleMenu();">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu();">About</a></li>
+            <li><a href="#Services" onclick="toggleMenu();">Services</a></li>
+            <li><a href="#Work" onclick="toggleMenu();">Work</a></li>
+            <li><a href="#Testimonial" onclick="toggleMenu();">Testimonial</a></li>
+            <li><a href="#Contact" onclick="toggleMenu();">Contact</a></li>
         </ul>
 
     </header>
@@ -72,13 +72,13 @@
             <div class="servicesBx">
                 <img src="/icon_fixed/Video.png">
                 <h2>Video Editor</h2>
-                <p>Adobe Premiere & Adobe After Effect</p>
+                <p> Premiere & After Effect</p>
             </div>
 
             <div class="servicesBx">
                 <img src="/icon_fixed/PhotoEditing.png">
                 <h2>Photo Editing</h2>
-                <p>Adobe Photoshop & Adobe Illustrator</p>
+                <p>Photoshop & Illustrator</p>
             </div>
 
             <div class="servicesBx">
@@ -132,7 +132,7 @@
             </div>
 
             <div class="workBX">
-                <h2> Instagram Gaming Feeds</h2>
+                <h2> Instagram Gaming </h2>
                 <img src="/icon_fixed/GameSTudio.png">
                 <div class="Heading">
                     <a href="#" class="btn2">View More</a>
@@ -231,8 +231,17 @@
             header.classList.toggle('sticky', window.scrollY > 0);
         });
 
-    </script>
 
+        
+    function toggleMenu(){
+        var menuToggle = document.querySelector('.toggle');
+        var menu = document.querySelector('.menu');
+        menuToggle.classList.toggle('active');
+        menu.classList.toggle('active');
+    }
+
+
+    </script>
 
 
 

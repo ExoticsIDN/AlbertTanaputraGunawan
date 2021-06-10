@@ -136,17 +136,20 @@ header.sticky ul li a{
     justify-content: space-between;
 }
 .contentBx{
-    padding-right: 30px;
+    padding: 25px 150px ;
+    padding-bottom: 200px;
 }
 
 .contentBx h3{
     font-size: 24px;
     margin-bottom: 10px;
+    align-self: start;
 
 }
 
 .w50{
     min-width: 50%;
+    min-height: 100%;
 }
 
 .img{
@@ -213,9 +216,11 @@ header.sticky ul li a{
 
 .work .content .workBX img{
     max-width: 100%;
+   
 
 }
 
+/*
 .btn2{
     position: relative;
     background: #1f1f1f;
@@ -241,7 +246,7 @@ header.sticky ul li a{
     letter-spacing: 2px;
     font-weight: 500;
     transition: 1s;
-}
+}*/
 
 .testimonial{
     background:white ;
@@ -377,3 +382,138 @@ header.sticky ul li a{
 }
 
 /*responsive*/
+@media (max-width: 991px ){
+    header, header.sticky{
+        padding: 20px 50px;
+        z-index: 1000;
+    }
+
+    .menu{
+        position: fixed;
+        top: 75px;
+        left: -100%;
+        display: block;
+        padding: 100px;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        background: white;
+        transition: 1s;
+        z-index: 999;
+        border-top: 1px solid rgba(0,0,0,0.2);
+    }
+
+    .menu.active{
+        left: 0;
+    }
+
+
+
+    header ul li a{
+        color: royalblue;
+        font-size: 24px;
+        margin: 10px;
+    }
+
+    .toggle{
+        width: 40px ;
+        height: 40px;
+        background: url(/icon_fixed/menu.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+
+    }
+
+    .toggle.active{
+        background: url(/icon_fixed/close.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 25px;
+        cursor: pointer;
+    }
+
+    header.sticky .toggle{
+        filter: invert(1);
+    }
+
+    section{
+        padding: 100px 50px;
+    }
+
+    .Banner_main{
+        padding: 150px 50px 100px;
+    }
+
+    .Banner_main h2{
+        font-size: 1.5em;
+        padding-left: 0;
+    }
+
+    .Banner_main h3{
+        font-size: 1em;
+        padding-left: 0;
+    }
+
+
+    .Heading h2 {
+        font-weight: 600;
+        font-size: 24px;
+    }
+
+    .contentBx h3 {
+        font-size: 20px;
+    }
+
+    .content{
+        flex-direction: column;
+    }
+
+    .w50{
+        margin-bottom: 20px;
+    }
+
+    .services .content .servicesBx{
+        margin: 10px;
+    }
+
+    .work .content .workBx{
+        width: 100%;
+        padding: 10px;
+    }
+
+    .testimonial .content .testimonialBx {
+        min-width: calc(100% - 50px);
+        padding: 40px 20px;
+        margin: 10px;
+        background: #1f1f1f;
+    }
+
+    .testimonial .content .testimonialBx h3{
+        margin-top: 20px;
+    }
+
+    .contactInfo {
+        min-width: 40%;
+        
+    }
+
+
+
+}
+
+@media (max-width:600px){
+    header, header.sticky{
+        padding: 20px 20px;
+        z-index: 1000;
+    }
+
+    .Banner_main{
+        padding: 150px 20px 100px;
+    }
+
+    .section{
+        padding: 100px 20px;
+    }
+}
